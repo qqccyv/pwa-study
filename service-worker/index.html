@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -22,6 +23,14 @@
       } else {
         console.warn('当前浏览器不支持service worker!');
       }
+    })
+    fetch('./data.json').then(res => {
+      console.log(res);
+      return res.json()
+    }).then(res => {
+      console.log(res);
+    }).catch(error => {
+      console.error(error);
     })
   </script>
 </body>

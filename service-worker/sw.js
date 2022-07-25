@@ -6,7 +6,6 @@ self.addEventListener('install', (event) => {
 })
 self.addEventListener('activate', (event) => {
   console.log('activate', event);
-  // 111
   // clients.claim()  使当前激活的serviceWorker立即生效并控制当前的页面
   event.waitUntil(clients.claim());
 })
